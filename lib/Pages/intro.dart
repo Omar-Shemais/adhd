@@ -10,22 +10,21 @@ class Intro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.mainColor,
-      body: SingleChildScrollView(
-        child: CarouselSlider(
-            options: CarouselOptions(
-              enlargeCenterPage: true,
-              enableInfiniteScroll: false,
-              autoPlay: false,
-              height: double.infinity,
-              aspectRatio: 16 / 9,
-            ),
-            items: [
-              ADHD_Container(),
-              Questions_Container(),
-              Comunity_Container(),
-              Note_Container()
-            ]),
-      ),
+      body: CarouselSlider(
+          options: CarouselOptions(
+            enlargeCenterPage: true,
+            enableInfiniteScroll: false,
+            autoPlay: false,
+            height: double.infinity,
+            aspectRatio: 16 / 9,
+            
+          ),
+          items:  [
+            ADHD_Container(),
+            Questions_Container(),
+            Comunity_Container(),
+            Note_Container()
+          ]),
     );
   }
 }

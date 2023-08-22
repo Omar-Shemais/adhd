@@ -1,6 +1,9 @@
+import 'package:adhd/Pages/testNow.dart';
 import 'package:adhd/core/app_colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../testADHD/views/quiz_details/view.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -31,12 +34,11 @@ class _SignInState extends State<SignIn> {
                   const SizedBox(
                     height: 21,
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                     child: Row(
                       children: [
-                        const Text(
+                        Text(
                           'Sign in',
                           style: TextStyle(
                               fontWeight: FontWeight.w600,
@@ -56,10 +58,10 @@ class _SignInState extends State<SignIn> {
                     ),
                     child: Column(
                       children: [
-                        Row(
+                        const Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(right: 118.0),
+                              padding: EdgeInsets.only(right: 118.0),
                               child: Text(
                                 'Email address',
                                 style: TextStyle(
@@ -80,10 +82,13 @@ class _SignInState extends State<SignIn> {
                               return 'E-mail must contain @';
                             } else if (!value.contains('.com')) {
                               return 'E-mail must contain .com';
+                            } else if (!value
+                                .contains('patient0@example.com')) {
+                              return 'email not exsist';
                             }
                             return null;
                           },
-                          style: TextStyle(color: AppColors.white),
+                          style: const TextStyle(color: AppColors.white),
                           keyboardType: TextInputType.emailAddress,
                           decoration: const InputDecoration(
                             hintText: "Enter your email",
@@ -108,7 +113,7 @@ class _SignInState extends State<SignIn> {
                         const SizedBox(
                           height: 30,
                         ),
-                        Row(
+                        const Row(
                           children: [
                             Text('Set password',
                                 style: TextStyle(
@@ -119,7 +124,7 @@ class _SignInState extends State<SignIn> {
                           ],
                         ),
                         TextFormField(
-                          style: TextStyle(color: AppColors.white),
+                          style: const TextStyle(color: AppColors.white),
                           controller: _passControler,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -162,7 +167,7 @@ class _SignInState extends State<SignIn> {
                               width: 40,
                               child: Checkbox(
                                   side: MaterialStateBorderSide.resolveWith(
-                                    (states) => BorderSide(
+                                    (states) => const BorderSide(
                                       width: 2.0,
                                       color: AppColors.white,
                                     ),
@@ -192,10 +197,23 @@ class _SignInState extends State<SignIn> {
                         Center(
                             child: InkWell(
                                 onTap: () {
+                                  // if (_emailControler ==
+                                  //     'patient0@example.com') {
+                                  //  Navigator.push(
+                                  //       context,
+                                  //       MaterialPageRoute(
+                                  //           builder: (context) =>
+                                  //               const QuizDetailsView()));
+                                  // }else{}
                                   if (formkey.currentState?.validate() ==
                                       true) {
                                     _emailControler.clear();
                                     _passControler.clear();
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => TestNow()),
+                                    );
                                   } else {}
                                 },
                                 child: Container(
@@ -204,7 +222,7 @@ class _SignInState extends State<SignIn> {
                                   decoration: BoxDecoration(
                                       color: AppColors.blue,
                                       borderRadius: BorderRadius.circular(35)),
-                                  child: Row(
+                                  child: const Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
@@ -228,8 +246,8 @@ class _SignInState extends State<SignIn> {
                         const SizedBox(
                           height: 25,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 45),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 65),
                           child: Row(children: <Widget>[
                             Expanded(
                                 child: Divider(
@@ -237,14 +255,13 @@ class _SignInState extends State<SignIn> {
                               thickness: 2,
                             )),
                             Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 20),
+                              padding: EdgeInsets.symmetric(horizontal: 20),
                               child: Text(
                                 "or",
                                 style: TextStyle(
                                     color: AppColors.white,
                                     fontWeight: FontWeight.w600,
-                                    fontSize: 20,
+                                    fontSize: 16,
                                     fontFamily: 'Amiko'),
                               ),
                             ),
@@ -259,7 +276,7 @@ class _SignInState extends State<SignIn> {
                     ),
                   ),
                   const SizedBox(
-                    height: 33,
+                    height: 23,
                   ),
                   Container(
                     width: double.infinity,
@@ -267,7 +284,7 @@ class _SignInState extends State<SignIn> {
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(8)),
-                    child: Row(
+                    child: const Row(
                       children: [
                         SizedBox(
                           width: 15,
@@ -295,7 +312,7 @@ class _SignInState extends State<SignIn> {
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(8)),
-                    child: Row(
+                    child: const Row(
                       children: [
                         SizedBox(
                           width: 15,
@@ -323,7 +340,7 @@ class _SignInState extends State<SignIn> {
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(8)),
-                    child: Row(
+                    child: const Row(
                       children: [
                         SizedBox(
                           width: 15,
@@ -342,10 +359,10 @@ class _SignInState extends State<SignIn> {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 30,
+                  const SizedBox(
+                    height: 20,
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Text(
                         'Don\'t have an account?',
@@ -354,12 +371,12 @@ class _SignInState extends State<SignIn> {
                       ),
                     ],
                   ),
-                  Row(
+                  const Row(
                     children: [
                       Text(
                         'Sign up',
                         style: TextStyle(
-                            color: AppColors.black,
+                            color: Colors.grey,
                             fontSize: 16,
                             decoration: TextDecoration.underline,
                             fontFamily: 'Amiko'),

@@ -2,28 +2,33 @@ import 'package:adhd/Pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 import '../core/app_colors/app_colors.dart';
+import '../testADHD/views/quiz_details/view.dart';
 
+// ignore: camel_case_types
 class ADHD_Container extends StatelessWidget {
   const ADHD_Container({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Column(
         children: [
           SizedBox(
-            height: 100,
+            height: 70,
           ),
-          Image(image: AssetImage('Assets/Images/adhd.jpg')),
+          Image(
+            image: AssetImage('Assets/Images/adhd.jpg'),
+            width: 300,
+          ),
           Text(
-            'What is ADHA ?',
+            'What is ADHD ?',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 24,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w700),
           ),
           SizedBox(
-            height: 23,
+            height: 12,
           ),
           Center(
               child: Text(
@@ -31,40 +36,31 @@ class ADHD_Container extends StatelessWidget {
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
             ' disorders of childhood. It is usually first ',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
             ' diagnosed in childhood and often lasts ',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
             ' into adulthood',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
         ],
       ),
@@ -72,8 +68,9 @@ class ADHD_Container extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Questions_Container extends StatelessWidget {
-  const Questions_Container({super.key});
+  Questions_Container({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -81,142 +78,135 @@ class Questions_Container extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: 100,
+            height: 85,
           ),
-          Image(image: AssetImage('Assets/Images/qustions.jpg')),
-          Text(
-            '11 Questions',
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.w500),
+          Image(
+            image: AssetImage('Assets/Images/qustions.jpg'),
+            width: 233,
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Center(
-              child: Text(
-            'This simple test has 11 quuestions that best',
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.w500),
-          )),
           SizedBox(
             height: 10,
           ),
+          Text(
+            '8 Questions',
+            style: TextStyle(
+                color: AppColors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w700),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Center(
+              child: Text(
+            'This simple test has 8 quuestions that best',
+            style: TextStyle(
+                color: AppColors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w400),
+          )),
           Center(
               child: Text(
             ' describes how we felt aand conducted ',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
             ' yourself over that past 3 monthes ',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
+          SizedBox(
+            height: 100,
+          ),
+          
         ],
       ),
     );
   }
 }
 
+// ignore: camel_case_types
 class Comunity_Container extends StatelessWidget {
   const Comunity_Container({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Column(
         children: [
           SizedBox(
-            height: 100,
+            height: 110,
           ),
-          Image(image: AssetImage('Assets/Images/comunte.jpg')),
+          Image(
+            image: AssetImage('Assets/Images/comunte.jpg'),
+            width: 300,
+          ),
           SizedBox(
-            height: 30,
+            height: 15,
           ),
           Text(
             'Community',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 24,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w700),
           ),
           SizedBox(
-            height: 30,
+            height: 10,
           ),
           Center(
               child: Text(
-            'a group of individuals who are impacted by',
+            'a group of individuals who are impacted ADHD',
+            style: TextStyle(
+                color: AppColors.white,
+                fontSize: 1,
+                fontWeight: FontWeight.w400),
+          )),
+          Center(
+              child: Text(
+            ' by ADHD,including those with themselves',
+            style: TextStyle(
+                color: AppColors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w400),
+          )),
+          Center(
+              child: Text(
+            ',thier family members,friends',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 17,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
-            ' ADHD,including those with ADHD  ',
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 17,
-                fontWeight: FontWeight.w500),
-          )),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-              child: Text(
-            ' themselves, thier family members,friends,',
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 17,
-                fontWeight: FontWeight.w500),
-          )),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
-              child: Text(
-            ' and caregivers.This community can,',
+            ' ,and caregivers. ',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
-            ' Provide a supportive and understanding,',
+            '',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
           Center(
               child: Text(
-            ' environment,',
+            '',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w400),
           )),
         ],
       ),
@@ -224,6 +214,7 @@ class Comunity_Container extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Note_Container extends StatelessWidget {
   const Note_Container({super.key});
 
@@ -232,51 +223,48 @@ class Note_Container extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          SizedBox(
-            height: 100,
+          const SizedBox(
+            height: 105,
           ),
-          Image(image: AssetImage('Assets/Images/note.jpg')),
-          Text(
+          const Image(
+            image: AssetImage('Assets/Images/note.jpg'),
+            width: 250,
+          ),
+          const Text(
             'Note',
             style: TextStyle(
                 color: AppColors.white,
                 fontSize: 24,
-                fontWeight: FontWeight.w500),
+                fontWeight: FontWeight.w700),
           ),
-          SizedBox(
-            height: 20,
+          const SizedBox(
+            height: 12,
           ),
-          Center(
+          const Center(
               child: Text(
             'This test is not a diagnostic test .please',
             style: TextStyle(
                 color: AppColors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontSize: 16,
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
+          const Center(
               child: Text(
             ' consult your physician if you are  ',
             style: TextStyle(
                 color: AppColors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontSize: 16,
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
-            height: 10,
-          ),
-          Center(
+          const Center(
               child: Text(
             ' concerned about ADHD',
             style: TextStyle(
                 color: AppColors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500),
+                fontSize: 16,
+                fontWeight: FontWeight.w400),
           )),
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           Center(
@@ -293,14 +281,14 @@ class Note_Container extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: AppColors.blue,
                         borderRadius: BorderRadius.circular(35)),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           'Let\'s go',
                           style: TextStyle(
                               fontSize: 18,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w700,
                               fontFamily: 'Amiko'),
                         ),
                         SizedBox(
