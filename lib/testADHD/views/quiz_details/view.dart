@@ -5,7 +5,6 @@ import '../../../testADHD/widgets/app_button.dart';
 import '../../../testADHD/widgets/app_text.dart';
 
 import '../../widgets/app/quiz_answer_card.dart';
-import '../../widgets/app_app_bar.dart';
 import 'controller.dart';
 
 class QuizDetailsView extends StatefulWidget {

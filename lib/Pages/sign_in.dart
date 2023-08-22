@@ -3,8 +3,6 @@ import 'package:adhd/core/app_colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../testADHD/views/quiz_details/view.dart';
-
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
 
@@ -82,9 +80,9 @@ class _SignInState extends State<SignIn> {
                               return 'E-mail must contain @';
                             } else if (!value.contains('.com')) {
                               return 'E-mail must contain .com';
-                            // } else if (!value
-                            //     .contains('patient0@example.com')) {
-                            //   return 'email not exsist';
+                            } else if (!value
+                                .contains('patient0@example.com')) {
+                              return 'email not exsist';
                             }
                             return null;
                           },
@@ -197,17 +195,17 @@ class _SignInState extends State<SignIn> {
                         Center(
                             child: InkWell(
                                 onTap: () {
-                                
-                                  // if (formkey.currentState?.validate() ==
-                                  //     true) {
-                                  //   _emailControler.clear();
-                                  //   _passControler.clear();
+                                  if (formkey.currentState?.validate() ==
+                                      true) {
+                                    _emailControler.clear();
+                                    _passControler.clear();
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => TestNow()),
+                                          builder: (context) =>
+                                              const TestNow()),
                                     );
-                                  // } else {}
+                                  } else {}
                                 },
                                 child: Container(
                                   height: 45,

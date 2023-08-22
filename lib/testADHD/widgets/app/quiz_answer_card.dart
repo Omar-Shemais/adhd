@@ -26,6 +26,7 @@ class QuizAnswerCard extends StatelessWidget {
         vertical: 12.height,
         horizontal: 12.width,
       ),
+      // ignore: sort_child_properties_last
       child: InkWell(
         onTap: onTap,
         child: Row(

@@ -24,6 +24,7 @@ class AppButton extends StatelessWidget {
         height: 62.height,
         width: double.infinity,
         alignment: Alignment.center,
+        // ignore: sort_child_properties_last
         child: AppText(
           title: title,
           color: AppColors.white,

@@ -2,7 +2,6 @@ import 'package:adhd/Pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 import '../core/app_colors/app_colors.dart';
-import '../testADHD/views/quiz_details/view.dart';
 
 // ignore: camel_case_types
 class ADHD_Container extends StatelessWidget {
@@ -70,11 +69,11 @@ class ADHD_Container extends StatelessWidget {
 
 // ignore: camel_case_types
 class Questions_Container extends StatelessWidget {
-  Questions_Container({super.key});
+  const Questions_Container({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Column(
         children: [
           SizedBox(

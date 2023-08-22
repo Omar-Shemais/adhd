@@ -13,7 +13,6 @@ void showSnackBar(
       behavior: SnackBarBehavior.floating,
       action: showDismissButton ? SnackBarAction(
         onPressed: () {
-          print('Dismiss');
         },
         textColor: Colors.yellow,
         label: "Dismiss",

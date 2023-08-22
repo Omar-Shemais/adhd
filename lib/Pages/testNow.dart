@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:adhd/core/app_colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -15,10 +17,10 @@ class TestNow extends StatelessWidget {
           padding: const EdgeInsets.all(70.0),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'Over the last',
@@ -29,7 +31,7 @@ class TestNow extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     '3 weeks,',
@@ -40,10 +42,10 @@ class TestNow extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'how often have you been',
@@ -54,7 +56,7 @@ class TestNow extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'bothered by any of the',
@@ -65,7 +67,7 @@ class TestNow extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     'following problems?',
@@ -76,7 +78,7 @@ class TestNow extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 90,
               ),
               Center(
@@ -121,7 +123,7 @@ class TestNow extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.black,
@@ -132,7 +134,7 @@ class TestNow extends StatelessWidget {
         child: BottomNavigationBar(
           backgroundColor: AppColors.mainColor,
           elevation: 10,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.clipboardList,

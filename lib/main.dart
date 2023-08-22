@@ -5,10 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 void main() 
 async {
   await ScreenUtil.ensureScreenSize();
-  runApp(ADHD());
+  runApp(const ADHD());
 }
 class ADHD extends StatelessWidget {
-   ADHD({super.key});
+   const ADHD({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class ADHD extends StatelessWidget {
         );
         return child!;
       },
-      home: Intro(),
+      home: const Intro(),
     );
   }
 }

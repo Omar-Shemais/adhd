@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -6,7 +5,6 @@ import '../../../testADHD/core/app_colors/app_colors.dart';
 import '../../../testADHD/core/route_utils/route_utils.dart';
 import '../../../testADHD/views/quiz_details/view.dart';
 import '../../../testADHD/widgets/app_button.dart';
-import '../../../testADHD/widgets/app_text.dart';
 
 class QuizResultView extends StatefulWidget {
   const QuizResultView({
@@ -34,21 +32,21 @@ class _QuizResultViewState extends State<QuizResultView> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 90,
                 ),
                 Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: Text(
                       '${widget.score}/${widget.total}',
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: AppColors.white,
                           fontSize: 30,
                           fontWeight: FontWeight.w700),
                     )),
-                Expanded(
+                const Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: EdgeInsets.all(30.0),
                     child: Column(
                       children: [
                         Text(
@@ -82,12 +80,12 @@ class _QuizResultViewState extends State<QuizResultView> {
                   onTap: () {
                     RouteUtils.pushAndPopAll(
                       context: context,
-                      view: QuizDetailsView(),
+                      view: const QuizDetailsView(),
                     );
                   },
                   color: AppColors.ansowr,
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 AppButton(
                   title: 'Find help',
                   onTap: () {},
@@ -106,7 +104,7 @@ class _QuizResultViewState extends State<QuizResultView> {
         ),
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           boxShadow: <BoxShadow>[
             BoxShadow(
               color: Colors.black,
@@ -117,7 +115,7 @@ class _QuizResultViewState extends State<QuizResultView> {
         child: BottomNavigationBar(
           backgroundColor: AppColors.mainColor,
           elevation: 10,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.clipboardList,

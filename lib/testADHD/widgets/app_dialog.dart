@@ -39,16 +39,16 @@ class AppDialog extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(title),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             if (subtitle != null)
               Align(
                 alignment: Alignment.center,
                 child: Text(subtitle!),
               ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => RouteUtils.pop(context),
-              child: Text('Ok'),
+              child: const Text('Ok'),
             ),
           ],
         ),
