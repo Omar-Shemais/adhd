@@ -82,9 +82,9 @@ class _SignInState extends State<SignIn> {
                               return 'E-mail must contain @';
                             } else if (!value.contains('.com')) {
                               return 'E-mail must contain .com';
-                            } else if (!value
-                                .contains('patient0@example.com')) {
-                              return 'email not exsist';
+                            // } else if (!value
+                            //     .contains('patient0@example.com')) {
+                            //   return 'email not exsist';
                             }
                             return null;
                           },
@@ -197,24 +197,17 @@ class _SignInState extends State<SignIn> {
                         Center(
                             child: InkWell(
                                 onTap: () {
-                                  // if (_emailControler ==
-                                  //     'patient0@example.com') {
-                                  //  Navigator.push(
-                                  //       context,
-                                  //       MaterialPageRoute(
-                                  //           builder: (context) =>
-                                  //               const QuizDetailsView()));
-                                  // }else{}
-                                  if (formkey.currentState?.validate() ==
-                                      true) {
-                                    _emailControler.clear();
-                                    _passControler.clear();
+                                
+                                  // if (formkey.currentState?.validate() ==
+                                  //     true) {
+                                  //   _emailControler.clear();
+                                  //   _passControler.clear();
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => TestNow()),
                                     );
-                                  } else {}
+                                  // } else {}
                                 },
                                 child: Container(
                                   height: 45,
