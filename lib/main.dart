@@ -2,7 +2,7 @@ import 'package:adhd/Pages/intro.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( ADHD());
+  runApp(ADHD());
 }
 
 class ADHD extends StatelessWidget {

@@ -299,7 +299,9 @@ class Note_Container extends StatelessWidget {
                         Text(
                           'Let\'s go',
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600,fontFamily: 'Amiko'),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Amiko'),
                         ),
                         SizedBox(
                           width: 20,
